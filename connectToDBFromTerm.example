@@ -1,0 +1,4 @@
+docker exec -it [Container Name] psql -U [Database User]
+
+Ex.
+docker exec -it image-viewer-db psql -U postgres

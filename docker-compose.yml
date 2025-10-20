@@ -1,0 +1,15 @@
+services:
+ db:
+    container_name: ${DOCKER_DB_CONTAINER_NAME}
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+      DATABASE_URL: ${DATABASE_URL}
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+volumes:
+  postgres:
